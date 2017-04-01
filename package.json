@@ -1,0 +1,23 @@
+{
+  "name": "test-backend",
+  "version": "1.0.0",
+  "description": "Test Backend Ivosights",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon lib/index.js --exec babel-node",
+    "build": "babel lib -d dist",
+    "serve": "node dist/index.js"
+  },
+  "author": "Muhamad Alfan",
+  "dependencies": {
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.2",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "nodemon": "^1.11.0"
+  }
+}
