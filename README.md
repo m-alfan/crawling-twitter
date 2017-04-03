@@ -7,6 +7,7 @@ Crawling Twitter menggunakan NodeJs
 1. buat file `config.json` 
 ```
 {
+  "appPort": 3000,
   "userMongodb": "",
   "passMongodb": "",
   "dbMongodb": "",
