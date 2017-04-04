@@ -4,22 +4,19 @@ Crawling Twitter menggunakan NodeJs
 
 ### Instalasi
 
-1. buat file `config.json` 
+1. setup environemn ```.env```
 ```
-{
-  "appPort": 3000,
-  "userMongodb": "",
-  "passMongodb": "",
-  "dbMongodb": "",
-  "twitterConfig": {
-    "consumer_key": "",
-    "consumer_secret": "",
-    "access_token_key": "",
-    "access_token_secret": ""
-  },
-  "filterTweet": ["filterTweet"],
-  "trackTweet": "trackTweet"
-}
+APP_PORT=
+
+HOST_DB=
+USER_DB=
+PASS_DB=
+NAME_DB=
+
+CONSUMER_KEY=
+CONSUMER_SECRET=
+ACCESS_TOKEN_KEY=
+ACCESS_TOKEN_SECRET=
 
 ```
 
@@ -28,12 +25,32 @@ Crawling Twitter menggunakan NodeJs
 npm install
 ```
 
-3. Running
+3. Running untuk development
 ```
 npm run start
 ```
-OR
+atau untuk production
 ```
 npm run build
 npm run serve
+```
+
+### Fitur
+1. crawling twitter *)pengaturan kata yang di cari ada pada file config.json
+2. ada 2 endpoint api untuk menampilkan hasil crawling 
+```
+host.com/api/v1/tweet
+
+Method : GET
+Params : 
+ - page default 1
+ - limit default 5
+ - text default ''
+
+ ***note untuk multiple text gunakan pemisah antar kata dengan tanda koma (,)
+```
+dan 
+
+```
+host.com/api/v1/series
 ```
